@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     color: #1e293b;
     line-height: 1.6;
-    padding: 20px 0;
+    padding-bottom: 30px;
 }
 
-/* Container Umum untuk Landing Page */
+/* Container Umum */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -21,18 +21,206 @@ body {
 }
 
 /* ================================================= */
-/* TAMPILAN HALAMAN PRODUK (PERSIS REFERENSI)         */
+/* 1. STYLING LANDING PAGE (INDEX.HTML)              */
+/* ================================================= */
+.hero-landing {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+/* Logo Landscape Responsif Penuh */
+.logo-container-full {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    padding: 0 15px;
+}
+
+.brand-logo-full {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.vision-text {
+    font-size: 1.05rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 15px auto 0 auto;
+    line-height: 1.7;
+}
+
+.product-selection {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.product-selection h2 {
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.product-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Kartu Produk dengan Animasi Modern */
+.product-link-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-img-thumb {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-color: #f1f5f9;
+}
+
+.card-img-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-link-card:hover .card-img-thumb img {
+    transform: scale(1.08);
+}
+
+/* Badge Lokasi di Bawah Katalog Produk */
+.location-badge-wrapper {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.badge {
+    background-color: #e2e8f0;
+    color: #334155;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Section Kontak (Telegram & WhatsApp) yang Dirapikan */
+.contact-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    margin: 20px auto 40px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+}
+
+.contact-section h2 {
+    font-size: 1.6rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #64748b;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Animasi Modern untuk Tombol Telegram & WhatsApp */
+.btn-telegram, .btn-whatsapp {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-telegram { 
+    background-color: #229ED9; 
+}
+
+.btn-telegram:hover { 
+    background-color: #1b8ac1; 
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(34, 158, 217, 0.3);
+}
+
+.btn-whatsapp { 
+    background-color: #25D366; 
+}
+
+.btn-whatsapp:hover { 
+    background-color: #20ba5a; 
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+
+/* ================================================= */
+/* 2. KHUSUS HALAMAN PRODUK (PRODUCT DETAIL LAYOUT)  */
 /* ================================================= */
 .product-page-wrapper {
     max-width: 650px;
-    margin: 0 auto;
+    margin: 30px auto;
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
     padding: 25px;
 }
 
-/* Header Banner di Atas Halaman Produk */
 .store-banner-header {
     text-align: center;
     margin-bottom: 25px;
@@ -47,7 +235,6 @@ body {
     border-radius: 12px;
 }
 
-/* Bagian Galeri Foto & Video */
 .product-gallery {
     margin-bottom: 20px;
 }
@@ -69,7 +256,6 @@ body {
     object-fit: cover;
 }
 
-/* Daftar Thumbnail */
 .thumbnail-list {
     display: flex;
     gap: 10px;
@@ -105,7 +291,6 @@ body {
     background: #e2e8f0;
 }
 
-/* Detail Teks Produk */
 .product-details h1 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -135,7 +320,6 @@ hr {
     margin: 15px 0;
 }
 
-/* Pilihan Varian Warna */
 .variant-section {
     margin-bottom: 15px;
 }
@@ -170,7 +354,6 @@ hr {
     border-color: #0f172a;
 }
 
-/* Tombol Marketplace & Aksi */
 .action-buttons {
     display: flex;
     flex-direction: column;
@@ -178,22 +361,25 @@ hr {
     margin-bottom: 20px;
 }
 
+/* Animasi Tombol Marketplace */
 .btn-marketplace {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 11px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
     color: #ffffff;
-    transition: opacity 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-marketplace:hover {
-    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .btn-shopee { background-color: #EE4D2D; }
@@ -214,7 +400,6 @@ hr {
     font-weight: 500;
 }
 
-/* Deskripsi Produk */
 .description h3 {
     font-size: 1.05rem;
     color: #0f172a;
@@ -251,115 +436,10 @@ hr {
     margin-top: 12px;
 }
 
-/* ================================================= */
-/* STYLING LANDING PAGE (INDEX.HTML)                 */
-/* ================================================= */
-.hero-landing {
-    text-align: center;
-    padding: 40px 20px 20px;
-}
-
-/* Logo Landscape Responsif Memenuhi Layar */
-.logo-container-full {
-    width: 100%;
-    max-width: 900px; /* Batas maksimal agar di layar lebar tetap proporsional */
-    margin: 0 auto 30px auto;
-    padding: 0 15px;
-}
-
-.brand-logo-full {
-    width: 100%;
-    height: auto;
-    max-height: 280px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-}
-
-.vision-text {
-    font-size: 1.05rem;
-    color: #64748b;
-    max-width: 700px;
-    margin: 15px auto 0 auto;
-    line-height: 1.7;
-}
-
-.product-selection {
-    text-align: center;
-    padding: 30px 0;
-}
-
-.product-selection h2 {
-    font-size: 1.8rem;
-    color: #0f172a;
-    margin-bottom: 8px;
-}
-
-.section-subtitle {
-    color: #64748b;
-    margin-bottom: 30px;
-}
-
-.product-buttons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-bottom: 30px;
-}
-
-.product-link-card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 16px;
-    text-decoration: none;
-    color: #0f172a;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product-link-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.card-img-thumb {
-    width: 100%;
-    height: 260px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 16px;
-    background-color: #f1f5f9;
-}
-
-.card-img-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.product-link-card:hover .card-img-thumb img {
-    transform: scale(1.05);
-}
-
-/* Badge Lokasi di Bawah Katalog Produk */
-.location-badge-wrapper {
-    margin-top: 25px;
-    margin-bottom: 20px;
-}
-
-.badge {
-    background-color: #e2e8f0;
-    color: #334155;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 50px;
-    display: inline-block;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .product-page-wrapper {
+        margin: 15px;
+        padding: 15px;
+    }
 }
