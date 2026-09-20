@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Rok Kimono Rayon Twill</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo-toko/logo-portrait.png">
+    <!-- Hubungkan CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Logo Toko -->
+        <header class="store-header">
+            <a href="index.html">
+                <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" class="header-logo">
+            </a>
+        </header>
+
+        <!-- Bagian Galeri (Kiri) -->
+        <div class="product-gallery">
+            <div class="main-display">
+                <!-- Foto Utama -->
+                <img id="main-img" src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg" alt="Set Rok Kimono Mocca">
+                <!-- Video Utama -->
+                <video id="main-video" controls style="display: none;">
+                    <source id="video-source" src="assets/vid/set-rok-kimono/set-rok-kimono.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+
+            <!-- Thumbnail Foto & Video -->
+            <div class="thumbnail-list" id="thumbnails">
+                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg" class="thumb active" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg', this)">
+                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca2.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca2.jpg', this)">
+                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca3.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca3.jpg', this)">
+                <div class="thumb video-thumb" onclick="changeMedia('vid', 'assets/vid/set-rok-kimono/set-rok-kimono.mp4', this)">
+                    <i class="fa-solid fa-play"></i> Video
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Detail Produk (Kanan) -->
+        <div class="product-details">
+            
+            <h1 id="product-title">Set Rok Kimono Bahan Rayon Twill - Mocca</h1>
+            
+            <div class="price">Harga: IDR 125.000</div>
+            
+            <div class="meta-info">
+                <span>📦 <strong>Kondisi:</strong> Baru</span>
+                <span>🔥 <strong>Stok:</strong> Tersedia</span>
+                <span>🚚 <strong>dikirim dari Pekalongan</strong></span>
+            </div>
+
+            <hr>
+
+            <!-- Opsi Varian Warna -->
+            <div class="variant-section">
+                <label>Pilih Warna:</label>
+                <div class="color-options">
+                    <button class="color-btn active" onclick="selectColor('Mocca')">Mocca</button>
+                </div>
+            </div>
+
+            <!-- Tombol Transaksi & Katalog -->
+            <div class="action-buttons">
+                <a href="https://shopee.co.id" target="_blank" class="btn-marketplace btn-shopee">
+                    <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                </a>
+                <a href="https://shop-id.tokopedia.com" target="_blank" class="btn-marketplace btn-toktok">
+                    <i class="fa-solid fa-store"></i> Beli di TikTok / Tokopedia
+                </a>
+                <a href="https://t.me/mb2store" target="_blank" class="btn-marketplace btn-telegram">
+                    <i class="fa-brands fa-telegram"></i> Lihat Katalog Lengkap di Telegram
+                </a>
+                <a id="wa-button" href="https://wa.me/6281262419674?text=Halo%20MobatMabet%20Store,%20saya%20mau%20pesan%20Set%20Rok%20Kimono%20Bahan%20Rayon%20Twill" target="_blank" class="btn-marketplace btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Admin di WhatsApp
+                </a>
+                <span class="badge-verify">
+                    <i class="fa-solid fa-shield-halved"></i> Belanja aman & terverifikasi di MobatMabet Store
+                </span>
+            </div>
+
+            <!-- Deskripsi Produk -->
+            <div class="description">
+                <h3>Deskripsi Produk</h3>
+                <p>Gaya etnik modern dengan balutan kimono serasi yang trendi. Terbuat dari bahan rayon twill berkualitas tinggi yang adem, lembut, serta jatuh sempurna di badan, memberikan kenyamanan maksimal sekaligus elegan.</p>
+                
+                <p class="desc-subtitle">Detail Ukuran:</p>
+                <ul>
+                    <li>Setelan Atasan Model Kimono + Rok Serasi</li>
+                    <li>Bahan Rayon Twill Premium</li>
+                </ul>
+
+                <p class="desc-subtitle">Note:</p>
+                <ul>
+                    <li>Warna pada foto tidak 100% sama persis karena efek pencahayaan kamera.</li>
+                    <li>Mohon cek kembali pesanan karena pembatalan tidak dapat diterima.</li>
+                    <li>Sertakan video unboxing utuh dari awal paket dibuka untuk klaim komplain.</li>
+                </ul>
+
+                <p class="desc-footer">Terimakasih.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript Varian -->
+    <script>
+        const phoneNum = "6281262419674";
+        const productData = {
+            'Mocca': {
+                title: 'Set Rok Kimono Bahan Rayon Twill - Mocca',
+                images: [
+                    'assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg', 
+                    'assets/img/set-rok-kimono/set-rok-kimono-mocca2.jpg',
+                    'assets/img/set-rok-kimono/set-rok-kimono-mocca3.jpg'
+                ],
+                video: 'assets/vid/set-rok-kimono/set-rok-kimono.mp4'
+            }
+        };
+
+        function selectColor(colorName) {
+            document.querySelectorAll('.color-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.trim() === colorName);
+            });
+            const data = productData[colorName];
+            document.getElementById('product-title').innerText = data.title;
+            const waText = encodeURIComponent(`Halo MobatMabet Store, saya mau pesan ${data.title}`);
+            document.getElementById('wa-button').href = `https://wa.me/${phoneNum}?text=${waText}`;
+
+            const thumbsContainer = document.getElementById('thumbnails');
+            thumbsContainer.innerHTML = `
+                <img src="${data.images[0]}" class="thumb active" onclick="changeMedia('img', '${data.images[0]}', this)">
+                <img src="${data.images[1]}" class="thumb" onclick="changeMedia('img', '${data.images[1]}', this)">
+                <img src="${data.images[2]}" class="thumb" onclick="changeMedia('img', '${data.images[2]}', this)">
+                <div class="thumb video-thumb" onclick="changeMedia('vid', '${data.video}', this)">
+                    <i class="fa-solid fa-play"></i> Video
+                </div>
+            `;
+            changeMedia('img', data.images[0], thumbsContainer.children[0]);
+        }
+
+        function changeMedia(type, src, element) {
+            const mainImg = document.getElementById('main-img');
+            const mainVideo = document.getElementById('main-video');
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            if (element) element.classList.add('active');
+
+            if (type === 'img') {
+                mainVideo.pause();
+                mainVideo.style.display = 'none';
+                mainImg.src = src;
+                mainImg.style.display = 'block';
+            } else if (type === 'vid') {
+                mainImg.style.display = 'none';
+                mainVideo.src = src;
+                mainVideo.load();
+                mainVideo.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -3,101 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blouse Atasan Wanita Viona - MobatMabet Store</title>
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Hubungkan ke CSS Utama -->
+    <title>Blus Atasan Wanita Viona</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo-toko/logo-portrait.png">
+    <!-- Hubungkan CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigasi Kembali ke Home -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="back-home">&larr; Kembali ke Beranda</a>
-        </div>
-    </nav>
+    <div class="container">
+        <!-- Header Logo Toko -->
+        <header class="store-header">
+            <a href="index.html">
+                <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" class="header-logo">
+            </a>
+        </header>
 
-    <!-- Detail Produk Section -->
-    <main class="container product-detail-container">
-        
-        <!-- Bagian Kiri: Slider Foto & Video Produk -->
-        <div class="product-media-section">
-            <!-- Slider Foto Otomatis -->
-            <div class="slider-container">
-                <div class="slide fade active">
-                    <img src="assets/img/blus-atasan/blus-viona-biru.jpg" alt="Blus Viona Biru">
-                </div>
-                <div class="slide fade">
-                    <img src="assets/img/blus-atasan/blus-viona-biru2.jpg" alt="Blus Viona Biru Sisi Lain">
-                </div>
-                <div class="slide fade">
-                    <img src="assets/img/blus-atasan/blus-viona-DustyPink.jpg" alt="Blus Viona Dusty Pink">
-                </div>
-                <div class="slide fade">
-                    <img src="assets/img/blus-atasan/blus-viona-DustyPink2.jpg" alt="Blus Viona Dusty Pink Sisi Lain">
-                </div>
-            </div>
-
-            <!-- Video Produk -->
-            <div class="video-container">
-                <h3>Video Produk</h3>
-                <video controls width="100%">
-                    <source src="assets/vid/blus-atasan/blus-viona-biru.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung pemutaran video.
+        <!-- Bagian Galeri (Kiri) -->
+        <div class="product-gallery">
+            <div class="main-display">
+                <!-- Foto Utama -->
+                <img id="main-img" src="assets/img/blus-atasan/blus-viona-biru.jpg" alt="Blus Viona Biru">
+                <!-- Video Utama -->
+                <video id="main-video" controls style="display: none;">
+                    <source id="video-source" src="assets/vid/blus-atasan/blus-viona-biru.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
                 </video>
             </div>
-        </div>
 
-        <!-- Bagian Kanan: Informasi Produk, Harga, & Marketplace -->
-        <div class="product-info-section">
-            <span class="badge">Dikirim dari Pekalongan</span>
-            <h1>Blouse Atasan Wanita Viona</h1>
-            <p class="product-price">Rp 45.000</p>
-            
-            <div class="product-description">
-                <h3>Deskripsi Produk</h3>
-                <p>Blus atasan wanita model Viona yang dirancang dengan bahan berkualitas tinggi, adem, dan nyaman dipakai seharian. Cocok untuk menemani aktivitas formal ke kantor, acara santai, maupun OOTD harianmu.</p>
-                <ul>
-                    <li>Bahan lembut dan tidak mudah kusut</li>
-                    <li>Jahitan rapi standar konveksi Pekalongan</li>
-                    <li>Tersedia dalam pilihan warna menarik (Biru & Dusty Pink)</li>
-                </ul>
-            </div>
-
-            <!-- Tombol Beli ke Marketplace -->
-            <div class="marketplace-actions">
-                <h3>Pesan Sekarang via Marketplace:</h3>
-                <div class="marketplace-buttons">
-                    <!-- Ganti link '#' dengan link toko marketplace Anda -->
-                    <a href="#" target="_blank" class="btn-shopee">Beli di Shopee</a>
-                    <a href="#" target="_blank" class="btn-tokopedia">Beli di Tokopedia</a>
-                    <a href="https://wa.me/6281262419674?text=Halo%20Admin,%20saya%20tertarik%20pesan%20Blouse%20Atasan%20Wanita%20Viona" target="_blank" class="btn-whatsapp">Beli via WhatsApp</a>
+            <!-- Thumbnail Foto & Video -->
+            <div class="thumbnail-list" id="thumbnails">
+                <img src="assets/img/blus-atasan/blus-viona-biru.jpg" class="thumb active" onclick="changeMedia('img', 'assets/img/blus-atasan/blus-viona-biru.jpg', this)">
+                <img src="assets/img/blus-atasan/blus-viona-biru2.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/blus-atasan/blus-viona-biru2.jpg', this)">
+                <div class="thumb video-thumb" onclick="changeMedia('vid', 'assets/vid/blus-atasan/blus-viona-biru.mp4', this)">
+                    <i class="fa-solid fa-play"></i> Video
                 </div>
             </div>
         </div>
 
-    </main>
+        <!-- Bagian Detail Produk (Kanan) -->
+        <div class="product-details">
+            
+            <h1 id="product-title">Blus atasan wanita viona bahan polo linen dan rayon motif - Biru</h1>
+            
+            <div class="price">Harga: IDR 45.000</div>
+            
+            <div class="meta-info">
+                <span>📦 <strong>Kondisi:</strong> Baru</span>
+                <span>🔥 <strong>Stok:</strong> 55</span>
+                <span>🚚 <strong>dikirim dari Pekalongan</strong></span>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 MobatMabet Store. All Rights Reserved.</p>
-    </footer>
+            <hr>
 
-    <!-- Script untuk Slider Otomatis -->
+            <!-- Opsi Varian Warna -->
+            <div class="variant-section">
+                <label>Pilih Warna:</label>
+                <div class="color-options">
+                    <button class="color-btn active" onclick="selectColor('Biru')">Biru</button>
+                    <button class="color-btn" onclick="selectColor('Dusty Pink')">Dusty Pink</button>
+                </div>
+            </div>
+
+            <!-- Tombol Transaksi & Katalog -->
+            <div class="action-buttons">
+                <a href="https://shopee.co.id" target="_blank" class="btn-marketplace btn-shopee">
+                    <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                </a>
+                <a href="https://shop-id.tokopedia.com" target="_blank" class="btn-marketplace btn-toktok">
+                    <i class="fa-solid fa-store"></i> Beli di TikTok / Tokopedia
+                </a>
+                <a href="https://t.me/mb2store" target="_blank" class="btn-marketplace btn-telegram">
+                    <i class="fa-brands fa-telegram"></i> Lihat Katalog Lengkap di Telegram
+                </a>
+                <a id="wa-button" href="https://wa.me/6281262419674?text=Halo%20MobatMabet%20Store,%20saya%20mau%20pesan%20Blus%20atasan%20wanita%20viona%20bahan%20polo%20linen%20dan%20rayon%20motif%20-%20Biru" target="_blank" class="btn-marketplace btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Admin di WhatsApp
+                </a>
+                <span class="badge-verify">
+                    <i class="fa-solid fa-shield-halved"></i> Belanja aman & terverifikasi di MobatMabet Store
+                </span>
+            </div>
+
+            <!-- Deskripsi Produk -->
+            <div class="description">
+                <h3>Deskripsi Produk</h3>
+                <p>Tampil stylish dan tetap bebas bergerak seharian nggak pernah sesimpel ini. Blus Viona memadukan bahan polo linen dan rayon motif yang terkenal super adem, ringan, dan jatuh dengan cantik di badan, bikin kamu nyaman beraktivitas dari pagi sampai malam tanpa gerah.</p>
+                
+                <p class="desc-subtitle">Detail Ukuran:</p>
+                <ul>
+                    <li>Lingkar Dada: Standarfit Nyaman</li>
+                    <li>Bahan Berkualitas Tinggi & Jahitan Rapi</li>
+                </ul>
+
+                <p class="desc-subtitle">Note:</p>
+                <ul>
+                    <li>Warna pada foto tidak 100% sama persis karena efek pencahayaan kamera.</li>
+                    <li>Mohon cek kembali pesanan karena pembatalan tidak dapat diterima.</li>
+                    <li>Sertakan video unboxing utuh dari awal paket dibuka untuk klaim komplain.</li>
+                </ul>
+
+                <p class="desc-footer">Terimakasih.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript Varian -->
     <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+        const phoneNum = "6281262419674";
+        const productData = {
+            'Biru': {
+                title: 'Blus atasan wanita viona bahan polo linen dan rayon motif - Biru',
+                images: ['assets/img/blus-atasan/blus-viona-biru.jpg', 'assets/img/blus-atasan/blus-viona-biru2.jpg'],
+                video: 'assets/vid/blus-atasan/blus-viona-biru.mp4'
+            },
+            'Dusty Pink': {
+                title: 'Blus atasan wanita viona bahan polo linen dan rayon motif - Dusty Pink',
+                images: ['assets/img/blus-atasan/blus-viona-DustyPink.jpg', 'assets/img/blus-atasan/blus-viona-DustyPink2.jpg'],
+                video: 'assets/vid/blus-atasan/blus-viona-dustypink.mp4'
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3500); // Ganti foto setiap 3.5 detik
+        };
+
+        function selectColor(colorName) {
+            document.querySelectorAll('.color-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.trim() === colorName);
+            });
+            const data = productData[colorName];
+            document.getElementById('product-title').innerText = data.title;
+            const waText = encodeURIComponent(`Halo MobatMabet Store, saya mau pesan ${data.title}`);
+            document.getElementById('wa-button').href = `https://wa.me/${phoneNum}?text=${waText}`;
+
+            const thumbsContainer = document.getElementById('thumbnails');
+            thumbsContainer.innerHTML = `
+                <img src="${data.images[0]}" class="thumb active" onclick="changeMedia('img', '${data.images[0]}', this)">
+                <img src="${data.images[1]}" class="thumb" onclick="changeMedia('img', '${data.images[1]}', this)">
+                <div class="thumb video-thumb" onclick="changeMedia('vid', '${data.video}', this)">
+                    <i class="fa-solid fa-play"></i> Video
+                </div>
+            `;
+            changeMedia('img', data.images[0], thumbsContainer.children[0]);
+        }
+
+        function changeMedia(type, src, element) {
+            const mainImg = document.getElementById('main-img');
+            const mainVideo = document.getElementById('main-video');
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            if (element) element.classList.add('active');
+
+            if (type === 'img') {
+                mainVideo.pause();
+                mainVideo.style.display = 'none';
+                mainImg.src = src;
+                mainImg.style.display = 'block';
+            } else if (type === 'vid') {
+                mainImg.style.display = 'none';
+                mainVideo.src = src;
+                mainVideo.load();
+                mainVideo.style.display = 'block';
+            }
         }
     </script>
 </body>
