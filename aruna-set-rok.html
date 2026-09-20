@@ -4,37 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aruna Set Rok</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logo-toko/logo-portrait.png">
-    <!-- Hubungkan CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header Logo Toko -->
-        <header class="store-header">
+    <div class="product-page-wrapper">
+        <header class="store-banner-header">
             <a href="index.html">
-                <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" class="header-logo">
+                <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" class="banner-img">
             </a>
         </header>
 
-        <!-- Bagian Galeri (Kiri) -->
         <div class="product-gallery">
             <div class="main-display">
-                <!-- Foto Utama -->
                 <img id="main-img" src="assets/img/aruna-set-rok/aruna-set-rok-biru.jpg" alt="Aruna Set Rok Biru">
-                <!-- Video Utama -->
                 <video id="main-video" controls style="display: none;">
                     <source id="video-source" src="assets/vid/aruna-set-rok/aruna-set-rok-biru.mp4" type="video/mp4">
                     Browser Anda tidak mendukung tag video.
                 </video>
             </div>
 
-            <!-- Thumbnail Foto & Video -->
             <div class="thumbnail-list" id="thumbnails">
                 <img src="assets/img/aruna-set-rok/aruna-set-rok-biru.jpg" class="thumb active" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru.jpg', this)">
                 <img src="assets/img/aruna-set-rok/aruna-set-rok-biru2.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru2.jpg', this)">
@@ -45,11 +37,8 @@
             </div>
         </div>
 
-        <!-- Bagian Detail Produk (Kanan) -->
         <div class="product-details">
-            
             <h1 id="product-title">Aruna Set Rok - Biru</h1>
-            
             <div class="price">Harga: IDR 119.000</div>
             
             <div class="meta-info">
@@ -60,7 +49,6 @@
 
             <hr>
 
-            <!-- Opsi Varian Warna -->
             <div class="variant-section">
                 <label>Pilih Warna:</label>
                 <div class="color-options">
@@ -71,13 +59,16 @@
                 </div>
             </div>
 
-            <!-- Tombol Transaksi & Katalog -->
             <div class="action-buttons">
                 <a href="https://shopee.co.id" target="_blank" class="btn-marketplace btn-shopee">
-                    <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee
+                    <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee (biaya 22%)
                 </a>
                 <a href="https://shop-id.tokopedia.com" target="_blank" class="btn-marketplace btn-toktok">
-                    <i class="fa-solid fa-store"></i> Beli di TikTok / Tokopedia
+                    <i class="fa-solid fa-store"></i> Beli di TikTok / Tokopedia (biaya 22%)
+                </a>
+                <!-- Link Toco Aruna -->
+                <a href="https://toco.id/listing/aruna-setelan-rok-lengan-panjang-katun-rayon-1788417192291-db5d" target="_blank" class="btn-marketplace btn-toco">
+                    <i class="fa-solid fa-cart-shopping"></i> Beli di Toco (biaya lebih murah)
                 </a>
                 <a href="https://t.me/mb2store" target="_blank" class="btn-marketplace btn-telegram">
                     <i class="fa-brands fa-telegram"></i> Lihat Katalog Lengkap di Telegram
@@ -90,10 +81,9 @@
                 </span>
             </div>
 
-            <!-- Deskripsi Produk -->
             <div class="description">
                 <h3>Deskripsi Produk</h3>
-                <p>Setelan rok anggun yang memancarkan pesona percaya diri setiap saat. Terbuat dari material pilihan berkualitas tinggi yang adem, jatuh, dan sangat nyaman dikenakan untuk berbagai kesempatan, baik formal maupun kasual harian.</p>
+                <p>Setelan rok anggun yang memancarkan pesona percaya diri setiap saat. Terbuat dari material pilihan berkualitas tinggi yang adem, jatuh, dan sangat nyaman dikenakan.</p>
                 
                 <p class="desc-subtitle">Detail Ukuran:</p>
                 <ul>
@@ -104,16 +94,13 @@
                 <p class="desc-subtitle">Note:</p>
                 <ul>
                     <li>Warna pada foto tidak 100% sama persis karena efek pencahayaan kamera.</li>
-                    <li>Mohon cek kembali pesanan karena pembatalan tidak dapat diterima.</li>
                     <li>Sertakan video unboxing utuh dari awal paket dibuka untuk klaim komplain.</li>
                 </ul>
-
                 <p class="desc-footer">Terimakasih.</p>
             </div>
         </div>
     </div>
 
-    <!-- Script JavaScript Varian -->
     <script>
         const phoneNum = "6281262419674";
         const productData = {
