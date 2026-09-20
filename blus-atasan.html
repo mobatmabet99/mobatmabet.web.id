@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blouse Atasan Wanita Viona - MobatMabet Store</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Hubungkan ke CSS Utama -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigasi Kembali ke Home -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="back-home">&larr; Kembali ke Beranda</a>
+        </div>
+    </nav>
+
+    <!-- Detail Produk Section -->
+    <main class="container product-detail-container">
+        
+        <!-- Bagian Kiri: Slider Foto & Video Produk -->
+        <div class="product-media-section">
+            <!-- Slider Foto Otomatis -->
+            <div class="slider-container">
+                <div class="slide fade active">
+                    <img src="assets/img/blus-atasan/blus-viona-biru.jpg" alt="Blus Viona Biru">
+                </div>
+                <div class="slide fade">
+                    <img src="assets/img/blus-atasan/blus-viona-biru2.jpg" alt="Blus Viona Biru Sisi Lain">
+                </div>
+                <div class="slide fade">
+                    <img src="assets/img/blus-atasan/blus-viona-DustyPink.jpg" alt="Blus Viona Dusty Pink">
+                </div>
+                <div class="slide fade">
+                    <img src="assets/img/blus-atasan/blus-viona-DustyPink2.jpg" alt="Blus Viona Dusty Pink Sisi Lain">
+                </div>
+            </div>
+
+            <!-- Video Produk -->
+            <div class="video-container">
+                <h3>Video Produk</h3>
+                <video controls width="100%">
+                    <source src="assets/vid/blus-atasan/blus-viona-biru.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Bagian Kanan: Informasi Produk, Harga, & Marketplace -->
+        <div class="product-info-section">
+            <span class="badge">Dikirim dari Pekalongan</span>
+            <h1>Blouse Atasan Wanita Viona</h1>
+            <p class="product-price">Rp 45.000</p>
+            
+            <div class="product-description">
+                <h3>Deskripsi Produk</h3>
+                <p>Blus atasan wanita model Viona yang dirancang dengan bahan berkualitas tinggi, adem, dan nyaman dipakai seharian. Cocok untuk menemani aktivitas formal ke kantor, acara santai, maupun OOTD harianmu.</p>
+                <ul>
+                    <li>Bahan lembut dan tidak mudah kusut</li>
+                    <li>Jahitan rapi standar konveksi Pekalongan</li>
+                    <li>Tersedia dalam pilihan warna menarik (Biru & Dusty Pink)</li>
+                </ul>
+            </div>
+
+            <!-- Tombol Beli ke Marketplace -->
+            <div class="marketplace-actions">
+                <h3>Pesan Sekarang via Marketplace:</h3>
+                <div class="marketplace-buttons">
+                    <!-- Ganti link '#' dengan link toko marketplace Anda -->
+                    <a href="#" target="_blank" class="btn-shopee">Beli di Shopee</a>
+                    <a href="#" target="_blank" class="btn-tokopedia">Beli di Tokopedia</a>
+                    <a href="https://wa.me/6281262419674?text=Halo%20Admin,%20saya%20tertarik%20pesan%20Blouse%20Atasan%20Wanita%20Viona" target="_blank" class="btn-whatsapp">Beli via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MobatMabet Store. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Script untuk Slider Otomatis -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3500); // Ganti foto setiap 3.5 detik
+        }
+    </script>
+</body>
+</html>
