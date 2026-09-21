@@ -533,3 +533,43 @@ footer {
         height: 380px;
     }
 }
+/* Perbaikan Tampilan Video agar Utuh dan Tidak Kepotong di Desktop */
+.main-display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Foto tetap memenuhi area dengan estetik */
+    transition: transform 0.5s ease;
+}
+
+.main-display video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Video vertikal akan tampil utuh tanpa terpotong */
+    background-color: #0f172a; /* Latar belakang elegan di sisi kiri-kanan video */
+}
+
+/* Perbaikan Logo Landscape di Header Halaman Produk (Agar Tidak Kepotong) */
+.store-banner-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+    background: #ffffff;
+    border-radius: 16px 16px 0 0;
+}
+
+.banner-img {
+    width: 100%;
+    max-width: 380px; /* Batas ideal agar logo tampil penuh dan tidak melar berlebihan */
+    height: auto;
+    max-height: 110px;
+    object-fit: contain; /* Memastikan logo tampil 100% utuh tidak terpotong */
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.banner-img:hover {
+    transform: scale(1.03);
+}
