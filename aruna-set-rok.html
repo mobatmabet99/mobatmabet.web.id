@@ -12,12 +12,7 @@
 <body>
 
     <div class="product-page-wrapper">
-        <header class="store-banner-header">
-            <a href="index.html">
-                <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" class="banner-img">
-            </a>
-        </header>
-
+        <!-- Galeri Foto & Video (Kiri) -->
         <div class="product-gallery">
             <div class="main-display">
                 <img id="main-img" src="assets/img/aruna-set-rok/aruna-set-rok-biru.jpg" alt="Aruna Set Rok Biru">
@@ -37,6 +32,7 @@
             </div>
         </div>
 
+        <!-- Detail Produk & Informasi (Kanan) -->
         <div class="product-details">
             <h1 id="product-title">Aruna Set Rok - Biru</h1>
             <div class="price">Harga IDR 119K</div>
@@ -66,7 +62,6 @@
                 <a href="https://shop-id.tokopedia.com/view/product/1737334719763940821" target="_blank" class="btn-marketplace btn-toktok">
                     <i class="fa-solid fa-store"></i> Beli di TikTok / Tokopedia (biaya 22%)
                 </a>
-                <!-- Link Toco Aruna -->
                 <a href="https://toco.id/listing/aruna-setelan-rok-lengan-panjang-katun-rayon-1788417192291-db5d" target="_blank" class="btn-marketplace btn-toco">
                     <i class="fa-solid fa-cart-shopping"></i> Beli di Toco (biaya lebih murah)
                 </a>
@@ -105,10 +100,18 @@
                     <li>Sertakan video unboxing utuh dari awal paket dibuka untuk klaim komplain.</li>
                 </ul>
                 <p class="desc-footer">Terimakasih.</p>
+
+                <!-- LOGO LANDSCAPE DI BAWAH (Penutup Halaman) -->
+                <div class="store-banner-footer" style="margin-top: 35px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 30px;">
+                    <a href="index.html">
+                        <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto; transition: transform 0.3s ease;">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Script JavaScript Interaktif -->
     <script>
         const phoneNum = "6281262419674";
         const productData = {
@@ -174,7 +177,7 @@
         function changeMedia(type, src, element) {
             const mainImg = document.getElementById('main-img');
             const mainVideo = document.getElementById('main-video');
-            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.thumb, .video-thumb').forEach(t => t.classList.remove('active'));
             if (element) element.classList.add('active');
 
             if (type === 'img') {
