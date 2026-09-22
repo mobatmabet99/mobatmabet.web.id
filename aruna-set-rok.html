@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan khusus agar teks deskripsi tidak meluber ke kanan di Android */
+        .description, .description p, .description ul, .description li {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
 
@@ -89,7 +97,7 @@
                 <ul>
                     <li>Atasan</li>
                     <li>PB 67cm</li>
-                    <li>LD 112cm </li>
+                    <li>LD 112cm</li>
                     <li>PL 60cm</li>
                     <li>PANJANG ROK 95CM</li>
                 </ul>
@@ -101,17 +109,16 @@
                 </ul>
                 <p class="desc-footer">Terimakasih.</p>
 
-                <!-- LOGO LANDSCAPE DI BAWAH (Penutup Halaman) -->
+                <!-- LOGO LANDSCAPE DI BAWAH -->
                 <div class="store-banner-footer" style="margin-top: 35px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 30px;">
                     <a href="index.html">
-                        <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto; transition: transform 0.3s ease;">
+                        <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Script JavaScript Interaktif -->
     <script>
         const phoneNum = "6281262419674";
         const productData = {
