@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set Rok Kimono Bahan Rayon Twill</title>
-    <link rel="icon" type="image/png" href="assets/img/logo-toko/logo-portrait.png">
+    <link rel="icon" type="image/avif" href="assets/img/logo-toko/logo-portrait.avif">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,17 +23,16 @@
         <!-- Galeri Foto & Video (Kiri) -->
         <div class="product-gallery">
             <div class="main-display">
-                <img id="main-img" src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg" alt="Set Rok Kimono Mocca">
-                <video id="main-video" controls style="display: none;">
-                    <source id="video-source" src="assets/vid/set-rok-kimono/set-rok-kimono.mp4" type="video/mp4">
+                <img id="main-img" src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif" alt="Set Rok Kimono Mocca" loading="eager" fetchpriority="high" decoding="async">
+                <video id="main-video" controls preload="none" style="display: none;">
                     Browser Anda tidak mendukung tag video.
                 </video>
             </div>
 
             <div class="thumbnail-list" id="thumbnails">
-                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg" class="thumb active" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg', this)">
-                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca2.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca2.jpg', this)">
-                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca3.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca3.jpg', this)">
+                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif" class="thumb active" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif', this)">
+                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca2.avif" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca2.avif', this)">
+                <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca3.avif" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/set-rok-kimono/set-rok-kimono-mocca3.avif', this)">
                 <div class="thumb video-thumb" onclick="changeMedia('vid', 'assets/vid/set-rok-kimono/set-rok-kimono.mp4', this)">
                     <i class="fa-solid fa-play"></i> Video
                 </div>
@@ -56,7 +55,7 @@
             <div class="variant-section">
                 <label>Pilih Warna:</label>
                 <div class="color-options">
-                    <button class="color-btn active" onclick="selectColor('Mocca')">Mocca</button>
+                    <button class="color-btn active" data-color="Mocca" onclick="selectColor('Mocca')">Mocca</button>
                 </div>
             </div>
 
@@ -77,7 +76,7 @@
                     <i class="fa-brands fa-whatsapp"></i> Hubungi Admin di WhatsApp
                 </a>
                 <span class="badge-verify">
-                    <i class="fa-solid fa-shield-halved"></i> Belanja aman & terverifikasi di MobatMabet Store
+                    <i class="fa-solid fa-shield-halved"></i> Belanja aman & terverifikasi di Toko MobatMabet
                 </span>
             </div>
 
@@ -115,7 +114,7 @@
                 <!-- LOGO LANDSCAPE DI BAWAH -->
                 <div class="store-banner-footer" style="margin-top: 35px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 30px;">
                     <a href="index.html">
-                        <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="assets/img/logo-toko/logo-landscape.avif" alt="MobatMabet Store Logo" loading="lazy" decoding="async" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
                     </a>
                 </div>
             </div>
@@ -128,9 +127,9 @@
             'Mocca': {
                 title: 'Set Rok Kimono Bahan Rayon Twill - Mocca',
                 images: [
-                    'assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg', 
-                    'assets/img/set-rok-kimono/set-rok-kimono-mocca2.jpg',
-                    'assets/img/set-rok-kimono/set-rok-kimono-mocca3.jpg'
+                    'assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif', 
+                    'assets/img/set-rok-kimono/set-rok-kimono-mocca2.avif',
+                    'assets/img/set-rok-kimono/set-rok-kimono-mocca3.avif'
                 ],
                 video: 'assets/vid/set-rok-kimono/set-rok-kimono.mp4'
             }
@@ -138,18 +137,22 @@
 
         function selectColor(colorName) {
             document.querySelectorAll('.color-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.innerText.trim() === colorName);
+                btn.classList.toggle('active', btn.dataset.color === colorName);
             });
             const data = productData[colorName];
-            document.getElementById('product-title').innerText = data.title;
+            const productTitle = document.getElementById('product-title');
+            productTitle.innerText = data.title;
+            productTitle.classList.remove('text-arrive');
+            void productTitle.offsetWidth;
+            productTitle.classList.add('text-arrive');
             const waText = encodeURIComponent(`Halo MobatMabet Store, saya mau pesan ${data.title}`);
             document.getElementById('wa-button').href = `https://wa.me/${phoneNum}?text=${waText}`;
 
             const thumbsContainer = document.getElementById('thumbnails');
             thumbsContainer.innerHTML = `
-                <img src="${data.images[0]}" class="thumb active" onclick="changeMedia('img', '${data.images[0]}', this)">
-                <img src="${data.images[1]}" class="thumb" onclick="changeMedia('img', '${data.images[1]}', this)">
-                <img src="${data.images[2]}" class="thumb" onclick="changeMedia('img', '${data.images[2]}', this)">
+                <img src="${data.images[0]}" class="thumb active" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[0]}', this)">
+                <img src="${data.images[1]}" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[1]}', this)">
+                <img src="${data.images[2]}" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[2]}', this)">
                 <div class="thumb video-thumb" onclick="changeMedia('vid', '${data.video}', this)">
                     <i class="fa-solid fa-play"></i> Video
                 </div>

@@ -3,88 +3,487 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MobatMabet Store - Elegan & Trendi</title>
+    <title>MobatMabet | Jual Baju</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/logo-toko/logo-portrait.png">
+    <link rel="icon" type="image/avif" href="assets/img/logo-toko/logo-portrait.avif">
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Hubungkan ke file CSS utama -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-
-    <!-- Header / Branding & Visi Misi -->
-    <header class="hero-landing">
-        <div class="container">
-            <!-- Logo Branding (Diperbesar & Responsif memenuhi layar) -->
-            <div class="logo-container-full">
-                <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" class="brand-logo-full">
+<body class="landing-page">
+    <header class="site-header">
+        <nav class="container site-nav" aria-label="Navigasi utama">
+            <a class="brand-lockup" href="index.html" aria-label="Toko MobatMabet, beranda">
+                <img src="assets/img/logo-toko/logo-portrait.avif" alt="" class="brand-mark">
+                <span class="brand-name">MobatMabet <small>TOKO</small></span>
+            </a>
+            <div class="site-nav-links">
+                <a href="#koleksi">Koleksi</a>
+                <a href="#kontak">Kontak</a>
             </div>
-            
-            <h1>Gaya Modis untuk Setiap Langkah Percaya Dirimu</h1>
-            <p class="vision-text">
-                MobatMabet Store hadir dengan komitmen menghadirkan koleksi pakaian wanita pilihan yang memadukan kenyamanan, kualitas terbaik, dan tren fashion terkini. Kami percaya bahwa setiap wanita berhak tampil menawan di setiap momen.
-            </p>
-        </div>
+            <a class="nav-cta" href="#koleksi">Jelajahi koleksi <i class="fa-solid fa-arrow-right"></i></a>
+        </nav>
     </header>
 
-    <!-- Bagian Pilihan 3 Produk -->
+    <section class="hero-landing">
+        <div class="container hero-layout">
+            <div class="hero-copy">
+                <span class="hero-kicker"><i class="fa-solid fa-sparkles"></i> Gaya nyaman, percaya diri setiap hari</span>
+                <h1 aria-label="Temukan Baju yang terasa seperti kamu.">
+                    Temukan Baju yang <span id="typed-hero-text" aria-hidden="true">terasa seperti kamu.</span>
+                </h1>
+                <p class="vision-text" aria-label="Pilihan Baju yang nyaman dipakai, mudah dipadukan, dan siap menemani setiap momen spesialmu.">
+                    Pilihan Baju yang nyaman dipakai, mudah dipadukan, dan siap menemani setiap momen spesialmu.
+                </p>
+                <div class="hero-actions">
+                    <a href="#koleksi" class="hero-primary">Lihat koleksi <i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="https://wa.me/6281262419674" target="_blank" rel="noopener noreferrer" class="hero-secondary">
+                        <i class="fa-brands fa-whatsapp"></i> Tanya admin
+                    </a>
+                </div>
+                <div class="hero-highlights" aria-label="Keunggulan Toko MobatMabet">
+                    <span><i class="fa-solid fa-check"></i> Nyaman dipakai</span>
+                    <span><i class="fa-solid fa-check"></i> Pilihan warna menarik</span>
+                    <span><i class="fa-solid fa-check"></i> Dikirim dari Pekalongan</span>
+                </div>
+            </div>
+
+            <div class="hero-showcase">
+                <div class="showcase-orbit"></div>
+                <div class="showcase-card product-carousel" aria-roledescription="tayangan geser" aria-label="Produk pilihan Toko MobatMabet">
+                    <div class="carousel-topline">
+                        <span class="showcase-label">FAVORIT UNTUKMU</span>
+                        <span class="carousel-count" aria-live="polite"><span id="carousel-current">01</span> / 03</span>
+                    </div>
+                    <a class="carousel-product" id="carousel-link" href="blus-atasan.html" aria-label="Lihat Blus Viona warna Biru">
+                        <img id="carousel-image" src="assets/img/blus-atasan/blus-viona-biru.avif" alt="Blus Viona warna Biru" class="carousel-image" loading="eager" fetchpriority="high" decoding="async">
+                    </a>
+                    <div class="carousel-caption">
+                        <div class="carousel-product-info" aria-live="polite">
+                            <span class="carousel-category" id="carousel-category">FAVORIT HARIAN</span>
+                            <h2 id="carousel-title">Blus Viona - Biru</h2>
+                            <p id="carousel-price">Rp45.000</p>
+                        </div>
+                        <div class="carousel-controls">
+                            <button type="button" class="carousel-control" id="carousel-prev" aria-label="Produk sebelumnya">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button" class="carousel-control carousel-control-next" id="carousel-next" aria-label="Produk berikutnya">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-bottomline">
+                        <div class="carousel-dots" role="group" aria-label="Pilih produk">
+                            <button type="button" class="carousel-dot active" data-slide="0" aria-label="Tampilkan Blus Viona warna Biru" aria-current="true"></button>
+                            <button type="button" class="carousel-dot" data-slide="1" aria-label="Tampilkan Set Rok Aruna warna Burgundy"></button>
+                            <button type="button" class="carousel-dot" data-slide="2" aria-label="Tampilkan Set Rok Kimono warna Mocca"></button>
+                        </div>
+                        <span class="carousel-hint">Geser untuk menemukan gayamu <i class="fa-solid fa-sparkles"></i></span>
+                    </div>
+                </div>
+                <span class="showcase-sticker"><i class="fa-solid fa-heart"></i> Untuk momen berhargamu</span>
+            </div>
+        </div>
+    </section>
+
     <main class="container">
-        <section class="product-selection">
-            <h2>Pilihan Koleksi Kami</h2>
-            <p class="section-subtitle">Silakan pilih kategori produk yang ingin kamu lihat selengkapnya:</p>
+        <section class="product-selection" id="koleksi">
+            <div class="collection-heading">
+                <div class="collection-heading-copy">
+                    <span class="section-kicker">PILIHAN UNTUKMU</span>
+                    <h2>Pilih yang kamu suka, <span>tampil bergaya.</span></h2>
+                    <p class="section-subtitle">Tiga koleksi pilihan dengan karakter berbeda. Mana yang paling kamu banget?</p>
+                </div>
+                <div class="collection-count"><strong>03</strong><span>koleksi<br>pilihan</span></div>
+            </div>
             
             <div class="product-buttons-grid">
-                <!-- Produk 1 -->
-                <a href="blus-atasan.html" class="product-link-card">
-                    <div class="card-img-thumb">
-                        <img src="assets/img/blus-atasan/blus-viona-biru.jpg" alt="Blus Atasan">
+                <a href="blus-atasan.html" class="product-link-card collection-card collection-blouse">
+                    <div class="card-img-thumb collection-image">
+                        <img src="assets/img/blus-atasan/blus-viona-biru.avif" alt="Blus Atasan" loading="lazy" decoding="async">
                     </div>
-                    <span>Blus Atasan</span>
+                    <div class="collection-card-copy">
+                        <h3>Blus Atasan</h3>
+                        <p class="collection-price">Rp45.000</p>
+                        <p>Ringan, santai, dan gampang jadi andalan.</p>
+                        <span class="card-link">Lihat detail <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </a>
 
-                <!-- Produk 2 -->
-                <a href="set-rok-kimono.html" class="product-link-card">
-                    <div class="card-img-thumb">
-                        <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.jpg" alt="Set Rok Kimono">
+                <a href="aruna-set-rok.html" class="product-link-card collection-card collection-aruna">
+                    <div class="card-img-thumb collection-image">
+                        <img src="assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif" alt="Set Rok Aruna warna Burgundy" loading="lazy" decoding="async">
                     </div>
-                    <span>Set Rok Kimono</span>
+                    <div class="collection-card-copy">
+                        <h3>Aruna Set Rok</h3>
+                        <p class="collection-price">Rp119.000</p>
+                        <p>Warna Burgundy yang manis untuk tampil lebih percaya diri.</p>
+                        <span class="card-link">Lihat detail <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </a>
 
-                <!-- Produk 3 -->
-                <a href="aruna-set-rok.html" class="product-link-card">
-                    <div class="card-img-thumb">
-                        <img src="assets/img/aruna-set-rok/aruna-set-rok-biru.jpg" alt="Aruna Set Rok">
+                <a href="set-rok-kimono.html" class="product-link-card collection-card collection-kimono">
+                    <div class="card-img-thumb collection-image">
+                        <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif" alt="Set Rok Kimono warna Mocca" loading="lazy" decoding="async">
                     </div>
-                    <span>Aruna Set Rok</span>
+                    <div class="collection-card-copy">
+                        <h3>Set Rok Kimono</h3>
+                        <p class="collection-price">Rp125.000</p>
+                        <p>Warna Mocca dengan siluet anggun yang nyaman dipakai.</p>
+                        <span class="card-link">Lihat detail <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </a>
             </div>
 
-            <!-- Badge Dikirim dari Pekalongan dipindah ke sini -->
-            <div class="location-badge-wrapper">
-                <span class="badge">🚚 Dikirim Langsung dari Pekalongan</span>
+            <div class="trust-strip">
+                <span class="trust-icon"><i class="fa-solid fa-box-open"></i></span>
+                <span class="trust-copy"><strong>Dikirim langsung dari Pekalongan</strong><small>Pesananmu kami siapkan dengan sepenuh hati.</small></span>
+                <span class="trust-note"><i class="fa-solid fa-heart"></i> Belanja lebih nyaman</span>
             </div>
         </section>
 
-        <!-- Section Kontak (Tele & WA) -->
-        <section class="contact-section">
-            <h2>Terhubung dengan Kami</h2>
-            <p>Punya pertanyaan seputar produk atau ingin konsultasi pesanan? Silakan hubungi kami melalui:</p>
+        <section class="contact-section" id="kontak">
+            <span class="section-kicker">KAMI SIAP MEMBANTU</span>
+            <h2>Masih bingung pilih yang mana?</h2>
+            <p>Tanya-tanya dulu boleh banget. Kami siap bantu kamu menemukan pilihan yang pas.</p>
+            <a href="mailto:info@mobatmabet.web.id" class="contact-email">
+                <i class="fa-solid fa-envelope"></i> Email: info@mobatmabet.web.id
+            </a>
             <div class="contact-buttons">
-                <a href="https://t.me/mb2store" target="_blank" class="btn-telegram">
-                    <i class="fa-brands fa-telegram"></i> Lihat katalog lengkap di telegram
+                <a href="https://t.me/mb2store" target="_blank" rel="noopener noreferrer" class="btn-telegram">
+                    <i class="fa-brands fa-telegram"></i> Lihat katalog Telegram
                 </a>
-                <a href="https://wa.me/6281262419674" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Hubungi admin di whatsapp
+                <a href="https://wa.me/6281262419674" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi admin lewat WhatsApp
                 </a>
             </div>
         </section>
     </main>
 
     <!-- Footer / Copyright -->
-    <footer>
-        <p>&copy; 2026 MobatMabet Store. All Rights Reserved.</p>
+    <footer class="site-footer">
+        <a href="index.html" class="footer-brand" aria-label="Toko MobatMabet - kembali ke beranda">
+            <img src="assets/img/logo-toko/logo-landscape.avif" alt="Logo Toko MobatMabet" loading="lazy" decoding="async">
+        </a>
+        <p>&copy; 2026 Toko MobatMabet. Dibuat dengan <i class="fa-solid fa-heart"></i> di Pekalongan.</p>
     </footer>
 
+    <script>
+        const featuredProducts = [
+            {
+                title: 'Blus Viona - Biru',
+                category: 'FAVORIT HARIAN',
+                price: 'Rp45.000',
+                image: 'assets/img/blus-atasan/blus-viona-biru.avif',
+                alt: 'Blus Viona warna Biru',
+                href: 'blus-atasan.html',
+                linkLabel: 'Lihat Blus Viona warna Biru'
+            },
+            {
+                title: 'Set Rok Aruna - Burgundy',
+                category: 'PESONA YANG ISTIMEWA',
+                price: 'Rp119.000',
+                image: 'assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif',
+                alt: 'Set Rok Aruna warna Burgundy',
+                href: 'aruna-set-rok.html',
+                linkLabel: 'Lihat Set Rok Aruna warna Burgundy'
+            },
+            {
+                title: 'Set Rok Kimono - Mocca',
+                category: 'LEMBUT & ANGGUN',
+                price: 'Rp125.000',
+                image: 'assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif',
+                alt: 'Set Rok Kimono warna Mocca',
+                href: 'set-rok-kimono.html',
+                linkLabel: 'Lihat Set Rok Kimono warna Mocca'
+            }
+        ];
+        const carouselImage = document.getElementById('carousel-image');
+        const carouselLink = document.getElementById('carousel-link');
+        const carouselTitle = document.getElementById('carousel-title');
+        const carouselCategory = document.getElementById('carousel-category');
+        const carouselPrice = document.getElementById('carousel-price');
+        const carouselCurrent = document.getElementById('carousel-current');
+        const carouselDots = Array.from(document.querySelectorAll('.carousel-dot'));
+        const productCarousel = document.querySelector('.product-carousel');
+        const heroCopy = document.querySelector('.hero-copy');
+        const typedHeroText = document.getElementById('typed-hero-text');
+        const visionText = document.querySelector('.vision-text');
+        let activeSlide = 0;
+        let touchStartX = null;
+        let suppressCarouselClick = false;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let heroIsVisible = !('IntersectionObserver' in window);
+        let carouselIsVisible = !('IntersectionObserver' in window);
+        let pageIsVisible = !document.hidden;
+        let visionFrame = null;
+        let visionElapsed = 0;
+        let visionLastFrame = null;
+        let visionTypedCharacterCount = -1;
+        let heroTimer = null;
+        let heroTimerDeadline = 0;
+        let heroTimerRemaining = 0;
+        let heroTimerCallback = null;
+        let carouselTimer = null;
+        let carouselTimerDeadline = 0;
+        let carouselTimerRemaining = 5000;
+        let carouselAutoplayStopped = false;
+        let syncCarouselAutoplay = () => {};
+
+        const heroPhrases = [
+            'terasa seperti kamu.',
+            'nyaman di setiap langkah.',
+            'siap temani harimu.'
+        ];
+
+        function canAnimateHero() {
+            return !reducedMotion && heroIsVisible && pageIsVisible;
+        }
+
+        function syncVisionTyping() {
+            if (!canAnimateHero() || visionFrame !== null) return;
+            visionFrame = window.requestAnimationFrame((now) => {
+                visionFrame = null;
+                if (visionLastFrame !== null) {
+                    visionElapsed += now - visionLastFrame;
+                }
+                visionLastFrame = now;
+
+                const progress = Math.min(visionElapsed / 3000, 1);
+                const typedCharacters = Math.floor(progress * fullVisionText.length);
+                if (typedCharacters !== visionTypedCharacterCount) {
+                    visionText.textContent = fullVisionText.slice(0, typedCharacters);
+                    visionTypedCharacterCount = typedCharacters;
+                }
+
+                if (progress < 1) {
+                    syncVisionTyping();
+                } else {
+                    visionLastFrame = null;
+                    visionText.classList.remove('is-typing');
+                }
+            });
+        }
+
+        const fullVisionText = visionText.textContent.trim();
+        if (!reducedMotion) {
+            visionText.textContent = '';
+            visionText.classList.add('is-typing');
+        }
+
+        function pauseVisionTyping() {
+            if (visionFrame !== null) {
+                window.cancelAnimationFrame(visionFrame);
+                visionFrame = null;
+            }
+            visionLastFrame = null;
+        }
+
+        function startHeroTimer() {
+            if (heroTimerCallback === null || heroTimer !== null || !canAnimateHero()) return;
+            heroTimerDeadline = performance.now() + heroTimerRemaining;
+            heroTimer = window.setTimeout(() => {
+                const callback = heroTimerCallback;
+                heroTimer = null;
+                heroTimerCallback = null;
+                heroTimerRemaining = 0;
+                callback();
+            }, heroTimerRemaining);
+        }
+
+        function scheduleHeroStep(callback, delay) {
+            heroTimerCallback = callback;
+            heroTimerRemaining = delay;
+            startHeroTimer();
+        }
+
+        function pauseHeroTimer() {
+            if (heroTimer === null) return;
+            window.clearTimeout(heroTimer);
+            heroTimer = null;
+            heroTimerRemaining = Math.max(0, heroTimerDeadline - performance.now());
+        }
+
+        function syncHeroAnimation() {
+            if (canAnimateHero()) {
+                syncVisionTyping();
+                startHeroTimer();
+            } else {
+                pauseVisionTyping();
+                pauseHeroTimer();
+            }
+        }
+
+        if (!reducedMotion) {
+            const typingInterval = 5000;
+            let phraseIndex = 0;
+            let cycleElapsed = 0;
+
+            function animateHeroPhrase() {
+                cycleElapsed = 0;
+                const nextPhrase = heroPhrases[phraseIndex];
+                phraseIndex = (phraseIndex + 1) % heroPhrases.length;
+                let deleteIndex = typedHeroText.textContent.length;
+
+                function deleteCurrentText() {
+                    if (deleteIndex > 0) {
+                        typedHeroText.textContent = typedHeroText.textContent.slice(0, -1);
+                        deleteIndex -= 1;
+                        cycleElapsed += 24;
+                        scheduleHeroStep(deleteCurrentText, 24);
+                        return;
+                    }
+
+                    let typeIndex = 0;
+                    function typeNextCharacter() {
+                        if (typeIndex < nextPhrase.length) {
+                            typedHeroText.textContent += nextPhrase.charAt(typeIndex);
+                            typeIndex += 1;
+                            cycleElapsed += 52;
+                            scheduleHeroStep(typeNextCharacter, 52);
+                            return;
+                        }
+
+                        const remainingInterval = Math.max(0, typingInterval - cycleElapsed);
+                        scheduleHeroStep(animateHeroPhrase, remainingInterval);
+                    }
+
+                    typeNextCharacter();
+                }
+
+                deleteCurrentText();
+            }
+
+            scheduleHeroStep(animateHeroPhrase, typingInterval);
+        }
+
+        if ('IntersectionObserver' in window) {
+            const heroObserver = new IntersectionObserver(([entry]) => {
+                heroIsVisible = entry.isIntersecting && entry.intersectionRatio >= 0.15;
+                syncHeroAnimation();
+            }, { threshold: 0.15 });
+            heroObserver.observe(heroCopy);
+
+            const carouselObserver = new IntersectionObserver(([entry]) => {
+                carouselIsVisible = entry.isIntersecting && entry.intersectionRatio >= 0.15;
+                syncCarouselAutoplay();
+            }, { threshold: 0.15 });
+            carouselObserver.observe(productCarousel);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            pageIsVisible = !document.hidden;
+            syncHeroAnimation();
+            syncCarouselAutoplay();
+        });
+
+        syncHeroAnimation();
+
+        function showFeaturedProduct(index) {
+            activeSlide = (index + featuredProducts.length) % featuredProducts.length;
+            const product = featuredProducts[activeSlide];
+            carouselImage.classList.add('is-changing');
+            window.setTimeout(() => {
+                carouselImage.src = product.image;
+                carouselImage.alt = product.alt;
+                carouselLink.href = product.href;
+                carouselLink.setAttribute('aria-label', product.linkLabel);
+                carouselTitle.textContent = product.title;
+                carouselCategory.textContent = product.category;
+                carouselPrice.textContent = product.price;
+                [carouselTitle, carouselCategory, carouselPrice].forEach((element) => {
+                    element.classList.remove('text-arrive');
+                    void element.offsetWidth;
+                    element.classList.add('text-arrive');
+                });
+                carouselCurrent.textContent = String(activeSlide + 1).padStart(2, '0');
+                carouselDots.forEach((dot, dotIndex) => {
+                    const isActive = dotIndex === activeSlide;
+                    dot.classList.toggle('active', isActive);
+                    if (isActive) {
+                        dot.setAttribute('aria-current', 'true');
+                    } else {
+                        dot.removeAttribute('aria-current');
+                    }
+                });
+                carouselImage.classList.remove('is-changing');
+            }, 120);
+        }
+
+        syncCarouselAutoplay = function () {
+            const shouldRun = !reducedMotion && carouselIsVisible && pageIsVisible && !carouselAutoplayStopped;
+            if (shouldRun && carouselTimer === null) {
+                carouselTimerDeadline = performance.now() + carouselTimerRemaining;
+                carouselTimer = window.setTimeout(() => {
+                    carouselTimer = null;
+                    carouselTimerRemaining = 5000;
+                    showFeaturedProduct(activeSlide + 1);
+                    syncCarouselAutoplay();
+                }, carouselTimerRemaining);
+            } else if (!shouldRun && carouselTimer !== null) {
+                window.clearTimeout(carouselTimer);
+                carouselTimer = null;
+                carouselTimerRemaining = Math.max(0, carouselTimerDeadline - performance.now());
+            }
+        };
+
+        function stopCarouselAutoplay() {
+            carouselAutoplayStopped = true;
+            if (carouselTimer !== null) {
+                window.clearTimeout(carouselTimer);
+                carouselTimer = null;
+            }
+        }
+
+        if (!reducedMotion) {
+            syncCarouselAutoplay();
+
+            productCarousel.addEventListener('pointerenter', stopCarouselAutoplay, { once: true });
+            productCarousel.addEventListener('pointerdown', stopCarouselAutoplay, { once: true });
+            productCarousel.addEventListener('focusin', stopCarouselAutoplay, { once: true });
+            productCarousel.addEventListener('keydown', stopCarouselAutoplay, { once: true });
+            productCarousel.addEventListener('touchstart', stopCarouselAutoplay, { once: true, passive: true });
+            productCarousel.addEventListener('click', stopCarouselAutoplay, { once: true });
+        }
+
+        document.getElementById('carousel-prev').addEventListener('click', () => {
+            showFeaturedProduct(activeSlide - 1);
+        });
+        document.getElementById('carousel-next').addEventListener('click', () => {
+            showFeaturedProduct(activeSlide + 1);
+        });
+        carouselDots.forEach((dot) => {
+            dot.addEventListener('click', () => showFeaturedProduct(Number(dot.dataset.slide)));
+        });
+        productCarousel.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                showFeaturedProduct(activeSlide - 1);
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                showFeaturedProduct(activeSlide + 1);
+            }
+        });
+        productCarousel.addEventListener('touchstart', (event) => {
+            touchStartX = event.changedTouches[0].clientX;
+        }, { passive: true });
+        productCarousel.addEventListener('touchend', (event) => {
+            if (touchStartX === null) return;
+            const swipeDistance = event.changedTouches[0].clientX - touchStartX;
+            touchStartX = null;
+            if (Math.abs(swipeDistance) < 45) return;
+            suppressCarouselClick = true;
+            showFeaturedProduct(activeSlide + (swipeDistance < 0 ? 1 : -1));
+            window.setTimeout(() => {
+                suppressCarouselClick = false;
+            }, 400);
+        }, { passive: true });
+        carouselLink.addEventListener('click', (event) => {
+            if (suppressCarouselClick) event.preventDefault();
+        });
+    </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aruna Set Rok</title>
-    <link rel="icon" type="image/png" href="assets/img/logo-toko/logo-portrait.png">
+    <link rel="icon" type="image/avif" href="assets/img/logo-toko/logo-portrait.avif">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,17 +23,16 @@
         <!-- Galeri Foto & Video (Kiri) -->
         <div class="product-gallery">
             <div class="main-display">
-                <img id="main-img" src="assets/img/aruna-set-rok/aruna-set-rok-biru.jpg" alt="Aruna Set Rok Biru">
-                <video id="main-video" controls style="display: none;">
-                    <source id="video-source" src="assets/vid/aruna-set-rok/aruna-set-rok-biru.mp4" type="video/mp4">
+                <img id="main-img" src="assets/img/aruna-set-rok/aruna-set-rok-biru.avif" alt="Aruna Set Rok Biru" loading="eager" fetchpriority="high" decoding="async">
+                <video id="main-video" controls preload="none" style="display: none;">
                     Browser Anda tidak mendukung tag video.
                 </video>
             </div>
 
             <div class="thumbnail-list" id="thumbnails">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru.jpg" class="thumb active" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru.jpg', this)">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru2.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru2.jpg', this)">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru3.jpg" class="thumb" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru3.jpg', this)">
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru.avif" class="thumb active" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru.avif', this)">
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru2.avif" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru2.avif', this)">
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru3.avif" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru3.avif', this)">
                 <div class="thumb video-thumb" onclick="changeMedia('vid', 'assets/vid/aruna-set-rok/aruna-set-rok-biru.mp4', this)">
                     <i class="fa-solid fa-play"></i> Video
                 </div>
@@ -56,10 +55,10 @@
             <div class="variant-section">
                 <label>Pilih Warna:</label>
                 <div class="color-options">
-                    <button class="color-btn active" onclick="selectColor('Biru')">Biru</button>
-                    <button class="color-btn" onclick="selectColor('Burgundy')">Burgundy</button>
-                    <button class="color-btn" onclick="selectColor('Cokelat Tua')">Cokelat Tua</button>
-                    <button class="color-btn" onclick="selectColor('Hitam')">Hitam</button>
+                    <button class="color-btn active" data-color="Biru" onclick="selectColor('Biru')">Biru</button>
+                    <button class="color-btn" data-color="Burgundy" onclick="selectColor('Burgundy')">Burgundy</button>
+                    <button class="color-btn" data-color="Cokelat Tua" onclick="selectColor('Cokelat Tua')">Cokelat Tua</button>
+                    <button class="color-btn" data-color="Hitam" onclick="selectColor('Hitam')">Hitam</button>
                 </div>
             </div>
 
@@ -76,11 +75,11 @@
                 <a href="https://t.me/mb2store" target="_blank" class="btn-marketplace btn-telegram">
                     <i class="fa-brands fa-telegram"></i> Lihat Katalog Lengkap di Telegram
                 </a>
-                <a id="wa-button" href="https://wa.me/6281262419674?text=Halo%20MobatMabet%20Store,%20saya%20mau%20pesan%20Aruna%20Set%20Rok%20-%20Biru" target="_blank" class="btn-marketplace btn-whatsapp">
+                <a id="wa-button" href="https://wa.me/6281262419674?text=Halo%20Toko%20MobatMabet,%20saya%20mau%20pesan%20Aruna%20Set%20Rok%20-%20Biru" target="_blank" class="btn-marketplace btn-whatsapp">
                     <i class="fa-brands fa-whatsapp"></i> Hubungi Admin di WhatsApp
                 </a>
                 <span class="badge-verify">
-                    <i class="fa-solid fa-shield-halved"></i> Belanja aman & terverifikasi di MobatMabet Store
+                    <i class="fa-solid fa-shield-halved"></i> Belanja aman & terverifikasi di Toko MobatMabet
                 </span>
             </div>
 
@@ -112,7 +111,7 @@
                 <!-- LOGO LANDSCAPE DI BAWAH -->
                 <div class="store-banner-footer" style="margin-top: 35px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 30px;">
                     <a href="index.html">
-                        <img src="assets/img/logo-toko/logo-landscape.png" alt="MobatMabet Store Logo" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="assets/img/logo-toko/logo-landscape.avif" alt="MobatMabet Store Logo" loading="lazy" decoding="async" style="width: 100%; max-width: 500px; height: auto; object-fit: contain; display: block; margin: 0 auto;">
                     </a>
                 </div>
             </div>
@@ -125,36 +124,36 @@
             'Biru': {
                 title: 'Aruna Set Rok - Biru',
                 images: [
-                    'assets/img/aruna-set-rok/aruna-set-rok-biru.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-biru2.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-biru3.jpg'
+                    'assets/img/aruna-set-rok/aruna-set-rok-biru.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-biru2.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-biru3.avif'
                 ],
                 video: 'assets/vid/aruna-set-rok/aruna-set-rok-biru.mp4'
             },
             'Burgundy': {
                 title: 'Aruna Set Rok - Burgundy',
                 images: [
-                    'assets/img/aruna-set-rok/aruna-set-rok-burgundy.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-burgundy2.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-burgundy3.jpg'
+                    'assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-burgundy2.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-burgundy3.avif'
                 ],
                 video: 'assets/vid/aruna-set-rok/aruna-set-rok-cokelatTua.mp4'
             },
             'Cokelat Tua': {
                 title: 'Aruna Set Rok - Cokelat Tua',
                 images: [
-                    'assets/img/aruna-set-rok/aruna-set-rok-cokelatTua.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-cokelatTua2.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-cokelatTua3.jpg'
+                    'assets/img/aruna-set-rok/aruna-set-rok-cokelatTua.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-cokelatTua2.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-cokelatTua3.avif'
                 ],
                 video: 'assets/vid/aruna-set-rok/aruna-set-rok-cokelatTua.mp4'
             },
             'Hitam': {
                 title: 'Aruna Set Rok - Hitam',
                 images: [
-                    'assets/img/aruna-set-rok/aruna-set-rok-hitam.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-hitam2.jpg', 
-                    'assets/img/aruna-set-rok/aruna-set-rok-hitam3.jpg'
+                    'assets/img/aruna-set-rok/aruna-set-rok-hitam.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-hitam2.avif', 
+                    'assets/img/aruna-set-rok/aruna-set-rok-hitam3.avif'
                 ],
                 video: 'assets/vid/aruna-set-rok/aruna-set-rok-hitam.mp4'
             }
@@ -162,18 +161,22 @@
 
         function selectColor(colorName) {
             document.querySelectorAll('.color-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.innerText.trim() === colorName);
+                btn.classList.toggle('active', btn.dataset.color === colorName);
             });
             const data = productData[colorName];
-            document.getElementById('product-title').innerText = data.title;
+            const productTitle = document.getElementById('product-title');
+            productTitle.innerText = data.title;
+            productTitle.classList.remove('text-arrive');
+            void productTitle.offsetWidth;
+            productTitle.classList.add('text-arrive');
             const waText = encodeURIComponent(`Halo MobatMabet Store, saya mau pesan ${data.title}`);
             document.getElementById('wa-button').href = `https://wa.me/${phoneNum}?text=${waText}`;
 
             const thumbsContainer = document.getElementById('thumbnails');
             thumbsContainer.innerHTML = `
-                <img src="${data.images[0]}" class="thumb active" onclick="changeMedia('img', '${data.images[0]}', this)">
-                <img src="${data.images[1]}" class="thumb" onclick="changeMedia('img', '${data.images[1]}', this)">
-                <img src="${data.images[2]}" class="thumb" onclick="changeMedia('img', '${data.images[2]}', this)">
+                <img src="${data.images[0]}" class="thumb active" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[0]}', this)">
+                <img src="${data.images[1]}" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[1]}', this)">
+                <img src="${data.images[2]}" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[2]}', this)">
                 <div class="thumb video-thumb" onclick="changeMedia('vid', '${data.video}', this)">
                     <i class="fa-solid fa-play"></i> Video
                 </div>
