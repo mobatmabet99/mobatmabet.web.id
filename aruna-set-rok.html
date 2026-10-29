@@ -30,10 +30,10 @@
             </div>
 
             <div class="thumbnail-list" id="thumbnails">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru.avif" class="thumb active" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru.avif', this)">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru2.avif" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru2.avif', this)">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru3.avif" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru3.avif', this)">
-                <div class="thumb video-thumb" onclick="changeMedia('vid', 'assets/vid/aruna-set-rok/aruna-set-rok-biru.mp4', this)">
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru.avif" alt="Aruna Set Rok Biru, foto 1" class="thumb active" role="button" tabindex="0" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru.avif', this)">
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru2.avif" alt="Aruna Set Rok Biru, foto 2" class="thumb" role="button" tabindex="0" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru2.avif', this)">
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-biru3.avif" alt="Aruna Set Rok Biru, foto 3" class="thumb" role="button" tabindex="0" loading="lazy" decoding="async" onclick="changeMedia('img', 'assets/img/aruna-set-rok/aruna-set-rok-biru3.avif', this)">
+                <div class="thumb video-thumb" role="button" tabindex="0" aria-label="Putar video Aruna Set Rok Biru" onclick="changeMedia('vid', 'assets/vid/aruna-set-rok/aruna-set-rok-biru.mp4', this)">
                     <i class="fa-solid fa-play"></i> Video
                 </div>
             </div>
@@ -63,19 +63,19 @@
             </div>
 
             <div class="action-buttons">
-                <a href="https://shopee.co.id/Aruna-setelan-rok-legan-panjang-katun-rayon-i.131196354.42184126177" target="_blank" class="btn-marketplace btn-shopee">
+                <a href="https://shopee.co.id/Aruna-setelan-rok-legan-panjang-katun-rayon-i.131196354.42184126177" target="_blank" rel="noopener noreferrer" class="btn-marketplace btn-shopee">
                     <i class="fa-solid fa-bag-shopping"></i> Beli di Shopee (biaya 22%)
                 </a>
-                <a href="https://shop-id.tokopedia.com/view/product/1737334719763940821" target="_blank" class="btn-marketplace btn-toktok">
+                <a href="https://shop-id.tokopedia.com/view/product/1737334719763940821" target="_blank" rel="noopener noreferrer" class="btn-marketplace btn-toktok">
                     <i class="fa-solid fa-store"></i> Beli di TikTok / Tokopedia (biaya 22%)
                 </a>
-                <a href="https://toco.id/listing/aruna-setelan-rok-lengan-panjang-katun-rayon-1788417192291-db5d" target="_blank" class="btn-marketplace btn-toco">
+                <a href="https://toco.id/listing/aruna-setelan-rok-lengan-panjang-katun-rayon-1788417192291-db5d" target="_blank" rel="noopener noreferrer" class="btn-marketplace btn-toco">
                     <i class="fa-solid fa-cart-shopping"></i> Beli di Toco (biaya lebih murah)
                 </a>
-                <a href="https://t.me/mb2store" target="_blank" class="btn-marketplace btn-telegram">
+                <a href="https://t.me/mb2store" target="_blank" rel="noopener noreferrer" class="btn-marketplace btn-telegram">
                     <i class="fa-brands fa-telegram"></i> Lihat Katalog Lengkap di Telegram
                 </a>
-                <a id="wa-button" href="https://wa.me/6281262419674?text=Halo%20Toko%20MobatMabet,%20saya%20mau%20pesan%20Aruna%20Set%20Rok%20-%20Biru" target="_blank" class="btn-marketplace btn-whatsapp">
+                <a id="wa-button" href="https://wa.me/6281262419674?text=Halo%20Toko%20MobatMabet,%20saya%20mau%20pesan%20Aruna%20Set%20Rok%20-%20Biru" target="_blank" rel="noopener noreferrer" class="btn-marketplace btn-whatsapp">
                     <i class="fa-brands fa-whatsapp"></i> Hubungi Admin di WhatsApp
                 </a>
                 <span class="badge-verify">
@@ -137,7 +137,7 @@
                     'assets/img/aruna-set-rok/aruna-set-rok-burgundy2.avif', 
                     'assets/img/aruna-set-rok/aruna-set-rok-burgundy3.avif'
                 ],
-                video: 'assets/vid/aruna-set-rok/aruna-set-rok-cokelatTua.mp4'
+                video: null
             },
             'Cokelat Tua': {
                 title: 'Aruna Set Rok - Cokelat Tua',
@@ -174,12 +174,12 @@
 
             const thumbsContainer = document.getElementById('thumbnails');
             thumbsContainer.innerHTML = `
-                <img src="${data.images[0]}" class="thumb active" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[0]}', this)">
-                <img src="${data.images[1]}" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[1]}', this)">
-                <img src="${data.images[2]}" class="thumb" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[2]}', this)">
-                <div class="thumb video-thumb" onclick="changeMedia('vid', '${data.video}', this)">
+                <img src="${data.images[0]}" alt="${data.title}, foto 1" class="thumb active" role="button" tabindex="0" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[0]}', this)">
+                <img src="${data.images[1]}" alt="${data.title}, foto 2" class="thumb" role="button" tabindex="0" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[1]}', this)">
+                <img src="${data.images[2]}" alt="${data.title}, foto 3" class="thumb" role="button" tabindex="0" loading="lazy" decoding="async" onclick="changeMedia('img', '${data.images[2]}', this)">
+                ${data.video ? `<div class="thumb video-thumb" role="button" tabindex="0" aria-label="Putar video ${data.title}" onclick="changeMedia('vid', '${data.video}', this)">
                     <i class="fa-solid fa-play"></i> Video
-                </div>
+                </div>` : ''}
             `;
             changeMedia('img', data.images[0], thumbsContainer.children[0]);
         }
@@ -202,6 +202,13 @@
                 mainVideo.style.display = 'block';
             }
         }
+
+        document.getElementById('thumbnails').addEventListener('keydown', (event) => {
+            if ((event.key === 'Enter' || event.key === ' ') && event.target.matches('.thumb, .video-thumb')) {
+                event.preventDefault();
+                event.target.click();
+            }
+        });
     </script>
 </body>
 </html>
